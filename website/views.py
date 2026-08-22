@@ -3,11 +3,11 @@ from django.http import HttpResponse, JsonResponse
 
 # Create your views here.
 def index_html(request):
-    return render(request ,"index.html" )
+    return render(request ,"website/index.html" )
 
 def index_contact(request):
-    return render(request , "contact.html")
+    return render(request , "website/contact.html")
 
 
 def index_about(request):
-    return render(request , "about.html")
+    return render(request , "website/about.html")
