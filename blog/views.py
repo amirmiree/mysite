@@ -5,4 +5,5 @@ def index_blog_html(request):
     return render(request  ,"blog/blog-home.html" )
 
 def index_blog_single(request):
-    return render(request ,"blog/blog-single.html" )
+    context = {"name": "amir", "lastname": "miri"}
+    return render(request ,"blog/blog-single.html", context )
