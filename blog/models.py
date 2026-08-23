@@ -13,3 +13,7 @@ class Post(models.Model):
     published_date = models.DateField(null = True)
     created_date= models.DateField(auto_now_add= True)
     updated_date= models.DateField(auto_now=True)
+
+
+    def __str__(self):
+        return "{} - {}".format(self.title, self.id)
