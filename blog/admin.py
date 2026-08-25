@@ -9,7 +9,7 @@ from blog.models import Post
 class Postadmin(admin.ModelAdmin):
     date_hierarchy = 'created_date'
     empty_value_display = '-empty-'
-    fields = ('title',)
+    # fields = ('title',)
     # ability of editing and add new post based on thses options 
     # list is so useful to have quick look at data 
     list_display = ("title","updated_date","created_date","published_date","status","content_viwe")
