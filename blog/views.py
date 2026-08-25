@@ -10,8 +10,8 @@ def index_blog_single(request):
     context = {"name": "amir", "lastname": "miri"}
     return render(request ,"blog/blog-single.html", context )
 
-# def test(request):
-#     # get data from databse 
-#     posts = Post.objects.all()
-#     context = {"post": posts}
-#     return render(request ,"test.html", context )
+def test(request, pid):
+    # get data from databse 
+    post = Post.objects.get(id = pid)
+    context = {"post": post}
+    return render(request ,"test.html", context )
