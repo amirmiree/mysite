@@ -8,3 +8,6 @@ class Contact(models.Model):
     message = models.TextField()
     created_date = models.DateField(auto_now_add=True)
     updated_now = models.DateField(auto_now = True)
+
+    def __str__(self):
+        return "{}".format(self.name)
