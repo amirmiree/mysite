@@ -12,9 +12,9 @@ class Postadmin(admin.ModelAdmin):
     # fields = ('title',)
     # ability of editing and add new post based on thses options 
     # list is so useful to have quick look at data 
-    list_display = ("title","updated_date","created_date","published_date","status","content_viwe")
+    list_display = ("title", "author","updated_date","created_date","published_date","status","content_viwe")
     # lets have a filter by an eleman:
-    list_filter = ("status",)
+    list_filter = ("status","author")
     # lets have ordering 
     # ordering  =("created_date",)
     # reverse

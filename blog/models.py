@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 # data base --> create table the name is : app_name-class-name --> coulns --> filds
 # Create your models here.
 class Post(models.Model):
@@ -6,7 +7,7 @@ class Post(models.Model):
     content = models.TextField()
     # tag
     # imgae
-    # author
+    author = models.ForeignKey( User , on_delete=models.SET_NULL, null =True )
     # category
     content_viwe = models.IntegerField(default = 0)
     status = models.BooleanField(default=False)
