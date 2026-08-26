@@ -2,11 +2,19 @@ from django.db import models
 from django.contrib.auth.models import User
 # data base --> create table the name is : app_name-class-name --> coulns --> filds
 # Create your models here.
+
+class Category(models.Model):
+    name = models.CharField(max_length= 255)
+
+    def __str__(self):
+        return self.name
+
+
 class Post(models.Model):
     title = models.CharField(max_length= 255)
     content = models.TextField()
     # tag
-    # imgae
+    imgae = models.ImageField(upload_to='blog/', default ='blog/default.jpg')
     author = models.ForeignKey( User , on_delete=models.SET_NULL, null =True )
     # category
     content_viwe = models.IntegerField(default = 0)
