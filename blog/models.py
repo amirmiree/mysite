@@ -22,6 +22,10 @@ class Post(models.Model):
     published_date = models.DateField(null = True)
     created_date= models.DateField(auto_now_add= True)
     updated_date= models.DateField(auto_now=True)
+
+
+    def snipets(self):
+        return self.content[:100] +  ". . ."
     
     # in the class table or model and itss general for evevr also in admin panel and queries
     class Meta:
