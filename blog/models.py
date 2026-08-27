@@ -16,7 +16,7 @@ class Post(models.Model):
     # tag
     imgae = models.ImageField(upload_to='blog/', default ='blog/default.jpg')
     author = models.ForeignKey( User , on_delete=models.SET_NULL, null =True )
-    # category
+    category = models.ManyToManyField(Category)
     content_viwe = models.IntegerField(default = 0)
     status = models.BooleanField(default=False)
     published_date = models.DateField(null = True)

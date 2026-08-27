@@ -1,5 +1,5 @@
 from django.contrib import admin
-from blog.models import Post
+from blog.models import Post , Category
 # Register your models here.
 
 
@@ -24,6 +24,11 @@ class Postadmin(admin.ModelAdmin):
     # eleman vorodi bayad as no tme bashe! daste bande base on created date
 admin.site.register(Post, Postadmin)
 
+# show this table in admin panel dby class
+class Categoryadmin(admin.ModelAdmin):
+    pass
+
+admin.site.register(Category , Categoryadmin)
 
 # second way:
 # @admin.register(Post)
