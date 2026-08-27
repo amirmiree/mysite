@@ -1,6 +1,7 @@
 
 {% extends 'base.html' %}
 {% load static %}
+{% load blog_tags %}
 {% block content %}
 
 <!-- start banner Area -->
@@ -157,9 +158,17 @@
 				</nav>
 			</div>
 			<div class="col-lg-4 sidebar-widgets">
-
+<!-- 
 				{% include 'blog/blog-ads.html' %}
-
+				{% hello %}
+				{% calculate 2 3 %}
+				{% default %}
+				{% postcount %} -->
+				<!-- for iterate in data first use as-->
+				<!-- {% showpublished as sp %}
+				{% for post in sp %}
+				{{post.title}}
+				{% endfor %}	 -->
 			</div>
 		</div>
 	</div>
