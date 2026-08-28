@@ -27,3 +27,14 @@ def showpublished(name= "published_post"):
     return posts
 
 
+@register.filter
+def filetrcontent(value, arg):
+    return value[:arg]
+
+
+
+@register.inclusion_tag('popularpost.html')
+def popularpost():
+    # posts= Post.objects.filter(status=1).order_by("created_date")
+    posts= Post.objects.filter(status=1).order_by("-created_date")[:1]
+    return {"posts": posts}

@@ -158,17 +158,26 @@
 				</nav>
 			</div>
 			<div class="col-lg-4 sidebar-widgets">
-<!-- 
+
 				{% include 'blog/blog-ads.html' %}
+				<!--
 				{% hello %}
 				{% calculate 2 3 %}
-				{% default %}
+				{% default %} 
 				{% postcount %} -->
 				<!-- for iterate in data first use as-->
 				<!-- {% showpublished as sp %}
 				{% for post in sp %}
 				{{post.title}}
 				{% endfor %}	 -->
+				<!-- ------------ -->
+				<!-- {% showpublished as sp %}
+				{% for post in sp %}
+				<p>{{post.content|filetrcontent:10}}</p>
+				{% endfor %}	 -->
+
+				<!-- inclusion tags -->
+				{% popularpost %}
 			</div>
 		</div>
 	</div>
